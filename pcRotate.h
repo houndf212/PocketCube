@@ -2,7 +2,6 @@
 #define PCROTATE_H
 
 #include <string>
-#include "pcDefine.h"
 
 namespace pocket_cube {
 

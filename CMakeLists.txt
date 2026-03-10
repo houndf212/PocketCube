@@ -41,10 +41,10 @@ set (APP_SOURCE
     main.cpp
     )
 
-add_executable(b.out ${APP_SOURCE})
+add_executable(pocket_cube ${APP_SOURCE})
 
 include(GNUInstallDirs)
-install(TARGETS b.out
+install(TARGETS pocket_cube 
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )

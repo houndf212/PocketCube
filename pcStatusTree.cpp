@@ -9,6 +9,11 @@ _get_inner_node(const pcStatusTree::Node_t *pNode)
     return &pNode->second;
 }
 
+void pcStatusTree::reserve(size_t n)
+{
+    m_statusMap.reserve(n);
+}
+
 void pcStatusTree::make_reverse_rl(std::string &rl, const Node_t *pNode)
 {
     auto p = _get_inner_node(pNode);

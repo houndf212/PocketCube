@@ -10,6 +10,9 @@ void pcIsoSolver::_build_iso_status_v3()
 {
     assert(m_nodeTree.size() == 0);
 
+    // improve speed by mul by some times
+    m_nodeTree.reserve(g_iso_all_status_num * 2);
+
     using HashNodeVec = std::vector<const pcStatusTree::Node_t *>;
     HashNodeVec curLevel;
     HashNodeVec nextLevel;

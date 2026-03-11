@@ -91,12 +91,17 @@ void pcMeetInMiddleSolver::_init_finish_status()
 
     HashNodeVec nextLevel;
 
-    constexpr size_t g_preLevel = 7;
+    m_initTree.reserve(800 * 10000);
+
+    constexpr size_t g_preLevel = 8;
     for (size_t level=0; level<g_preLevel; ++level)
     {
         bool b = _gen_next_level(&m_initTree, &m_initCurLevel, &nextLevel, level, true);
-        assert(b);
-        assert(false == m_initCurLevel.empty());
+        if (false == b)
+        {
+            assert(m_initCurLevel.empty());
+            break;
+        }
     }
 
     m_initLevel = g_preLevel;

@@ -13,6 +13,8 @@ class pcStatusTree
 public:
     pcStatusTree() = default;
 
+    void reserve(size_t n);
+
     struct innerNode_t
     {
         const innerNode_t *m_parentNode;

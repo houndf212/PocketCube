@@ -176,3 +176,21 @@ rcMeetInMiddleSolver::_find_level_in_tree(
 
     return nullptr;
 }
+
+size_t
+rubik_cube::test_cycle_times(const std::string &rl)
+{
+    rcStatus st;
+    st.reset();
+
+    assert(st.isFinish());
+
+    size_t n = 0;
+    do {
+        ++n;
+        st.rotate_string(rl);
+
+    } while (false == st.isFinish());
+
+    return n;
+}

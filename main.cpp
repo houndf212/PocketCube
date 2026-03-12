@@ -197,6 +197,18 @@ _test_rc()
         case 'F' :
         case 'b' :
         case 'B' : st.rotate(c); break;
+        case 't':
+        {
+            printf("input test pattern: ");
+            char buffer[256] = {0};
+            scanf("%s", buffer);
+            string ss = buffer;
+            printf("input str: %s\n", ss.c_str());
+
+            size_t cn = test_cycle_times(ss);
+            printf("cycle times: %zu\n", cn);
+            continue;
+        }
 
         default  : continue;
         }
@@ -212,7 +224,7 @@ _test_rc()
 
 int main()
 {
-    _test_pc();
+    _test_rc();
 
     return 0;
 }

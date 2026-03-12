@@ -37,4 +37,7 @@ private:
     size_t       m_initLevel;
 };
 
+size_t
+test_cycle_times(const std::string &rl);
+
 }

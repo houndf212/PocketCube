@@ -156,6 +156,14 @@ void rcStatus::rotate_next(rcNextMoveRotate nr)
     }
 }
 
+void rcStatus::rotate_string(const std::string &rl)
+{
+    for (auto c : rl)
+    {
+        rotate(c);
+    }
+}
+
 size_t rcStatus::calc_hash() const
 {
     constexpr size_t LEN = sizeof(m_status) / sizeof(size_t);

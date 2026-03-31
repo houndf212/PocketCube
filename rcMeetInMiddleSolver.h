@@ -27,7 +27,7 @@ private:
                     HashNodeVec *nextLevel,
                     size_t nLevel, bool isInitTree);
 
-   const rcStatusTree::Node_t *
+   static const rcStatusTree::Node_t *
    _find_level_in_tree(const rcStatusTree::Node_t *&fromNode,
                        const rcStatusTree *tree,
                        const HashNodeVec *levelVec);

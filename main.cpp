@@ -224,7 +224,7 @@ _test_rc()
 
 int main()
 {
-    _test_rc();
+    _test_pc();
 
     return 0;
 }

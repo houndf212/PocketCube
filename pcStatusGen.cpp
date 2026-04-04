@@ -8,7 +8,7 @@
 using namespace pocket_cube;
 
 static constexpr const char * g_allRotate = "UuDdLlRrFfBb";
-static constexpr size_t       g_rotateSize = ::strlen(g_allRotate);
+static constexpr size_t       g_rotateSize = std::char_traits<char>::length(g_allRotate);
 static_assert (12 == g_rotateSize);
 
 void

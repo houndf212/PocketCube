@@ -224,6 +224,11 @@ _test_rc()
 
 int main()
 {
+#if 0
+    // test leak
+    int *p = (int*)::malloc(10);
+    p[2] = 10 ;
+#endif
     _test_pc();
 
     return 0;
